@@ -72,10 +72,8 @@ class _StoryPageState extends State<StoryPage> {
               ),
               Expanded(
                 flex: 2,
-                //TODO: Step 26 - Use a Flutter Visibility Widget to wrap this FlatButton.
-                //TODO: Step 28 - Set the "visible" property of the Visibility Widget to equal the output from the buttonShouldBeVisible() method in the storyBrain.
                 child: Visibility(
-                  visible: storyBrain.getChoice2().isNotEmpty,
+                  visible: storyBrain.button2ShouldBeVisible(),
                   child: FlatButton(
                     onPressed: () {
                       setState(() {
@@ -101,4 +99,3 @@ class _StoryPageState extends State<StoryPage> {
   }
 }
 
-//TODO: Step 29 - Run the app and test it against the Story Outline to make sure you've completed all the steps. The code for the completed app can be found here: https://github.com/londonappbrewery/destini-challenge-completed/
